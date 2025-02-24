@@ -16,8 +16,8 @@ export default function Layout() {
        <div onClick={(e)=>{e.stopPropagation()}} className="left-side ">
         <img src={image1}  alt="" />
         <Link to={''} className="left-tabs-meals text-xl"><i class="fa-solid fa-utensils me-2"></i> Meals</Link>
-        <h5 className="left-tabs-ingredients text-xl"><i class="fa-solid fa-utensils me-2"></i> Ingredients</h5>
-        <h5 className="left-tabs-area text-xl"><i class="fa-solid fa-utensils me-2"></i> Area</h5>
+        <Link  to={'/ingredients'} className="left-tabs-ingredients text-xl"><i class="fa-solid fa-utensils me-2"></i> Ingredients</Link>
+        <Link  to={'/area'} className="left-tabs-area text-xl"><i class="fa-solid fa-utensils me-2"></i> Area</Link>
         </div>
     </div>
     <div className='relative'>
