@@ -247,4 +247,62 @@ footer {
   display: flex;
   justify-content: center;
   padding-bottom: 100px;
+}
+
+.ingredients-page {
+  padding: 4rem 0.5rem;
+}
+.ingredients-page h2 {
+  font-size: 2.25rem;
+}
+.ingredients-page .ingredients-box {
+  padding: 3rem 0rem;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+}
+.ingredients-page .ingredients-box .ingredients-item {
+  text-align: center;
+  padding: 0px 10px;
+}
+.ingredients-page .ingredients-box .ingredients-item .inner {
+  border-radius: 15px;
+  padding: 10px 0;
+  background-color: rgba(128, 128, 128, 0.411);
+  transition-duration: 0.3s;
+}
+.ingredients-page .ingredients-box .ingredients-item .inner:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.ingredients-page h3 {
+  font-size: 1.3rem;
+}
+
+.area-page {
+  padding: 4rem 0.5rem;
+}
+.area-page h2 {
+  font-size: 2.25rem;
+}
+.area-page .area-box {
+  padding: 3rem 0rem;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+}
+.area-page .area-box .area-item {
+  text-align: center;
+  padding: 0px 10px;
+}
+.area-page .area-box .area-item .inner {
+  border-radius: 15px;
+  padding: 10px 0;
+  background-color: rgba(128, 128, 128, 0.411);
+  transition-duration: 0.3s;
+}
+.area-page .area-box .area-item .inner:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.area-page h3 {
+  font-size: 1.3rem;
 }/*# sourceMappingURL=index.css.map */
