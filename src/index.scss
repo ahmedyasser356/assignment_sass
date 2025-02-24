@@ -247,3 +247,22 @@ footer{
   right: 0;
 }
 
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid lightblue;
+  border-right-color: orange;
+  animation: l2 1s infinite linear;
+}
+@keyframes l2 {to{transform: rotate(1turn)}}
+
+  .loader-box{
+    width: 100%;
+  
+    display: flex;
+    justify-content: center;
+   padding-bottom: 100px;
+  }
+
+  

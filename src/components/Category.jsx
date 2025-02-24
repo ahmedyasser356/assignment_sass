@@ -1,30 +1,31 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import Card from './Card'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import Card from "./Card";
+import { useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import Loader from "./Loader";
 
-export default function Category({c}) {
+export default function Category() {
+  let { c } = useParams();
 
-  let[categoryArr,setCategoryArr]=useState([])
- 
-   async function getCategory(category){
-    try {
-      let {data}=await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
-      setCategoryArr(data.meals)
-       
-        
-    } catch (error) {
-      console.log(error);
-      
-    }
+  function getCategory() {
+    return axios.get(
+      `https://www.themealdb.com/api/json/v1/1/filter.php?c=${c}`
+    );
   }
+  let { data, isError, isPending, isLoading, error } = useQuery({
+    queryKey: ["getCategory", c],
+    queryFn: getCategory,
+    select: (data) => data?.data.meals,
+  });
 
-  useEffect(function(){
-    
-    getCategory(c)
-  },[])
+  if (isLoading || isPending) return <Loader></Loader>;
+
   return (
     <>
-        {categoryArr.map(function(item){return <Card item={item}></Card>})}
+      {data?.map(function (item) {
+        return <Card item={item}></Card>;
+      })}
     </>
-  )
+  );
 }

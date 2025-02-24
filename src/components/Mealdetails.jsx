@@ -15,6 +15,7 @@ let{strMeal,strInstructions,strYoutube,strMealThumb,
  async function getSpecialMeal(id) {
   try {
     let {data} = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+     console.log(data);
      
     setMeal(data.meals[0])
   } catch (error) {
@@ -53,7 +54,7 @@ let{strMeal,strInstructions,strYoutube,strMealThumb,
                    <li><span>{strIngredient7}</span><span>{strMeasure7}</span></li>
                    <li><span>{strIngredient8}</span><span>{strMeasure8}</span></li>
                    <li><span>{strIngredient9}</span><span>{strMeasure9}</span></li>
-                
+
             </ul>
         </div>
       </div>
