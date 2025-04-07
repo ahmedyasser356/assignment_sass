@@ -29,8 +29,8 @@ export default function Layout() {
         <Link to={'/area'} className="left-tabs-area text-xl"><i class="fa-solid fa-utensils me-2"></i> Area</Link>
       </div>
     </div>
-    <div className="right-side left-0 sm:left-[250px] bg-slate-500 ">
-       <div className="container mx-auto ">
+    <div className="right-side  left-0 sm:left-[250px] bg-slate-500 ">
+       <div className="container min-h-screen mx-auto ">
        
        <Outlet></Outlet>
        
